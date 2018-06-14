@@ -8,6 +8,16 @@ import org.json.JSONObject;
 
 public class Item implements JSONPopulator {
     private Condition condition;
+    private Double lat;
+    private Double longi;
+
+    public Double getLat() {
+        return lat;
+    }
+
+    public Double getLongi() {
+        return longi;
+    }
 
     public Condition getCondition() {
         return condition;
@@ -17,5 +27,8 @@ public class Item implements JSONPopulator {
     public void populate(JSONObject data) {
         condition = new Condition();
         condition.populate(data.optJSONObject("condition"));
+
+        lat = data.optDouble("lat");
+        longi = data.optDouble("long");
     }
 }

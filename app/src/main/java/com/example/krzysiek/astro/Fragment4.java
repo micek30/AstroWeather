@@ -18,11 +18,11 @@ import android.widget.Toast;
 import com.example.krzysiek.astro.data.Atmosphere;
 import com.example.krzysiek.astro.data.Channel;
 import com.example.krzysiek.astro.data.Item;
-import com.example.krzysiek.astro.databinding.FragmentFragment3Binding;
+import com.example.krzysiek.astro.databinding.FragmentFragment4Binding;
 import com.example.krzysiek.astro.service.WeatherServiceCallback;
 import com.example.krzysiek.astro.service.YahooWeatherService;
 
-public class Fragment3 extends Fragment implements WeatherServiceCallback {
+public class Fragment4 extends Fragment implements WeatherServiceCallback {
 
     private ImageView weatherIconImageView;
     private TextView temperatureTextView;
@@ -39,12 +39,12 @@ public class Fragment3 extends Fragment implements WeatherServiceCallback {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-//        fragment3LayoutBinding = DataBindingUtil.inflate(
+//        fragment4LayoutBinding = DataBindingUtil.inflate(
 //                inflater, R.layout.fragment_fragment3, container, false);
 //
-//        View view = fragment3LayoutBinding.getRoot();
+//        View view = fragment4LayoutBinding.getRoot();
 //
-//        fragment3LayoutBinding.setMoon(MainActivity.moon);
+//        fragment4LayoutBinding.setMoon(MainActivity.moon);
         ViewGroup view = (ViewGroup)inflater.inflate(R.layout.fragment_fragment3,container,false);
         weatherIconImageView = (ImageView)view.findViewById(R.id.weatherIconImageView);
         temperatureTextView = (TextView)view.findViewById(R.id.temperatureTextView);
