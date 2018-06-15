@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textViewTest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="Next Day"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:id="@+id/imageViewCode1"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignTop="@+id/textViewDay1"
+        android:layout_marginEnd="13dp"
+        android:layout_marginRight="13dp"
+        android:layout_toLeftOf="@+id/textViewHigh1"
+        android:layout_toStartOf="@+id/textViewHigh1"
+        app:srcCompat="@drawable/f44" />
+
+    <TextView
+        android:id="@+id/textViewDate1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewTest"
+        android:layout_toEndOf="@+id/textViewText1"
+        android:layout_toRightOf="@+id/textViewText1"
+        android:text="Date" />
+
+    <TextView
+        android:id="@+id/textViewDay1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewHigh1"
+        android:layout_alignStart="@+id/textViewHigh1"
+        android:layout_below="@+id/textViewDate1"
+        android:text="Day" />
+
+    <TextView
+        android:id="@+id/textViewHigh1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textViewLow1"
+        android:layout_alignRight="@+id/textViewLow1"
+        android:layout_below="@+id/textViewDay1"
+        android:text="High" />
+
+    <TextView
+        android:id="@+id/textViewLow1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewHigh1"
+        android:layout_toLeftOf="@+id/textViewTest"
+        android:layout_toStartOf="@+id/textViewTest"
+        android:text="Low" />
+
+    <TextView
+        android:id="@+id/textViewText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imageViewCode1"
+        android:layout_alignStart="@+id/imageViewCode1"
+        android:layout_below="@+id/imageViewCode1"
+        android:layout_marginTop="16dp"
+        android:text="Text" />
+
+    <ImageView
+        android:id="@+id/imageViewCode2"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignLeft="@+id/textViewText1"
+        android:layout_alignStart="@+id/textViewText1"
+        android:layout_below="@+id/textViewText1"
+        app:srcCompat="@drawable/f44" />
+
+    <TextView
+        android:id="@+id/textViewDate2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewLow1"
+        android:layout_alignStart="@+id/textViewLow1"
+        android:layout_alignTop="@+id/imageViewCode2"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textViewDay2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewDate2"
+        android:layout_alignStart="@+id/textViewDate2"
+        android:layout_below="@+id/textViewDate2"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textViewHigh2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewDay2"
+        android:layout_alignStart="@+id/textViewDay2"
+        android:layout_below="@+id/textViewDay2"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textViewLow2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewHigh2"
+        android:layout_alignStart="@+id/textViewHigh2"
+        android:layout_below="@+id/textViewHigh2"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textViewText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imageViewCode2"
+        android:layout_alignStart="@+id/imageViewCode2"
+        android:layout_below="@+id/imageViewCode2"
+        android:layout_marginTop="18dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textViewDate3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewText2"
+        android:layout_toEndOf="@+id/imageViewCode3"
+        android:layout_toRightOf="@+id/imageViewCode3"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textViewDay3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imageViewCode3"
+        android:layout_toEndOf="@+id/imageViewCode3"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textViewHigh3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewDay3"
+        android:layout_toEndOf="@+id/imageViewCode3"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textViewLow3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewHigh3"
+        android:layout_toEndOf="@+id/imageViewCode3"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textViewText3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/imageViewCode3"
+        android:layout_alignRight="@+id/imageViewCode3"
+        android:layout_below="@+id/imageViewCode3"
+        android:layout_marginTop="11dp"
+        android:text="TextView" />
+
+    <ImageView
+        android:id="@+id/imageViewCode3"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignLeft="@+id/textViewText2"
+        android:layout_alignStart="@+id/textViewText2"
+        android:layout_below="@+id/textViewDate3"
+        app:srcCompat="@drawable/f44" />
+
+
+</RelativeLayout>

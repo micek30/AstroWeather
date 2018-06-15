@@ -69,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
             adapter.addFragment(new Fragment2(), "Fragment2");
             adapter.addFragment(new Fragment3(), "Fragment3");
             adapter.addFragment(new Fragment4(), "Fragment4");
+            adapter.addFragment(new Fragment5(), "Fragment5");
 
             viewPager.setAdapter(adapter);
         }else{
@@ -78,6 +79,7 @@ public class MainActivity extends AppCompatActivity {
             adapter.addFragment(new Fragment2(), "Fragment2");
             adapter.addFragment(new Fragment3(), "Fragment3");
             adapter.addFragment(new Fragment4(), "Fragment4");
+            adapter.addFragment(new Fragment5(), "Fragment5");
 
             viewPager.setAdapter(adapter);
         }
