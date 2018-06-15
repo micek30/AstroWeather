@@ -63,7 +63,6 @@ public class Fragment3 extends Fragment implements WeatherServiceCallback {
         latitudeTextView = (TextView)view.findViewById(R.id.latitudeTextView);
         longitudeTextView = (TextView)view.findViewById(R.id.longitudeTextView);
         comboCity = (Spinner)view.findViewById(R.id.comboCity);
-        saveLocationButton=(Button)view.findViewById(R.id.saveLocationButton);
         editText = (EditText)view.findViewById(R.id.editText);
 
         preferences = getActivity().getSharedPreferences("com.example.krzysiek.astro", Context.MODE_PRIVATE);
