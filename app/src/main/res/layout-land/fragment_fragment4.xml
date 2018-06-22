@@ -22,9 +22,9 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_marginLeft="51dp"
-            android:layout_marginStart="51dp"
-            android:layout_marginTop="83dp"
+            android:layout_marginLeft="48dp"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="38dp"
             android:textSize="22sp"
             android:text="Wind:" />
 
@@ -47,9 +47,9 @@
             android:layout_alignLeft="@+id/textView"
             android:layout_alignStart="@+id/textView"
             android:layout_below="@+id/textView"
-            android:layout_marginTop="62dp"
-            android:textSize="22sp"
-            android:text="Wind direction" />
+            android:layout_marginTop="23dp"
+            android:text="Wind direction"
+            android:textSize="22sp" />
 
         <TextView
             android:id="@+id/WindDirtextView"
@@ -67,9 +67,10 @@
             android:layout_height="wrap_content"
             android:layout_alignLeft="@+id/textView3"
             android:layout_alignStart="@+id/textView3"
-            android:layout_centerVertical="true"
-            android:textSize="22sp"
-            android:text="Humidity" />
+            android:layout_below="@+id/textView3"
+            android:layout_marginTop="21dp"
+            android:text="Humidity"
+            android:textSize="22sp" />
 
         <TextView
             android:id="@+id/HumtextView"
@@ -89,9 +90,9 @@
             android:layout_alignLeft="@+id/textView5"
             android:layout_alignStart="@+id/textView5"
             android:layout_below="@+id/textView5"
-            android:layout_marginTop="75dp"
-            android:textSize="22sp"
-            android:text="Visibility" />
+            android:layout_marginTop="26dp"
+            android:text="Visibility"
+            android:textSize="22sp" />
 
         <TextView
             android:id="@+id/VistextView"

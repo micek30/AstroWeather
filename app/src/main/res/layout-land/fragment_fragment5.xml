@@ -25,12 +25,9 @@
         android:id="@+id/textViewDate1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textViewDate2"
-        android:layout_alignBottom="@+id/textViewDate2"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="17dp"
-        android:layout_marginStart="17dp"
+        android:layout_below="@+id/textViewText1"
+        android:layout_toEndOf="@+id/imageViewCode1"
+        android:layout_toRightOf="@+id/imageViewCode1"
         android:text="Date" />
 
     <TextView
@@ -46,10 +43,9 @@
         android:id="@+id/textViewHigh1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textViewHigh2"
-        android:layout_alignBottom="@+id/textViewHigh2"
         android:layout_alignLeft="@+id/textViewDay1"
         android:layout_alignStart="@+id/textViewDay1"
+        android:layout_below="@+id/textViewDay1"
         android:text="High" />
 
     <TextView
@@ -75,18 +71,18 @@
         android:id="@+id/imageViewCode2"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:layout_alignLeft="@+id/textViewText2"
-        android:layout_alignStart="@+id/textViewText2"
-        android:layout_below="@+id/textViewText3"
+        android:layout_alignTop="@+id/textViewDate2"
+        android:layout_toLeftOf="@+id/textViewText2"
+        android:layout_toStartOf="@+id/textViewText2"
         app:srcCompat="@drawable/f44" />
 
     <TextView
         android:id="@+id/textViewDate2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/imageViewCode2"
-        android:layout_alignStart="@+id/imageViewCode2"
-        android:layout_below="@+id/imageViewCode2"
+        android:layout_below="@+id/textViewText2"
+        android:layout_toEndOf="@+id/imageViewCode2"
+        android:layout_toRightOf="@+id/imageViewCode2"
         android:text="TextView" />
 
     <TextView
@@ -129,18 +125,18 @@
         android:id="@+id/textViewDate3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/imageViewCode3"
-        android:layout_alignStart="@+id/imageViewCode3"
-        android:layout_below="@+id/imageViewCode3"
+        android:layout_alignLeft="@+id/textViewLow3"
+        android:layout_alignStart="@+id/textViewLow3"
+        android:layout_alignTop="@+id/imageViewCode3"
         android:text="TextView" />
 
     <TextView
         android:id="@+id/textViewDay3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/textViewHigh2"
         android:layout_alignLeft="@+id/textViewDate3"
         android:layout_alignStart="@+id/textViewDate3"
-        android:layout_below="@+id/textViewDate3"
         android:text="TextView" />
 
     <TextView
@@ -156,9 +152,11 @@
         android:id="@+id/textViewLow3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/imageViewCode4"
-        android:layout_alignLeft="@+id/textViewHigh3"
-        android:layout_alignStart="@+id/textViewHigh3"
+        android:layout_alignBottom="@+id/imageViewCode3"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="79dp"
+        android:layout_marginRight="79dp"
         android:text="TextView" />
 
     <TextView
@@ -174,11 +172,9 @@
         android:id="@+id/imageViewCode3"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignTop="@+id/imageViewCode2"
-        android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp"
+        android:layout_below="@+id/textViewText3"
+        android:layout_toLeftOf="@+id/textViewDate3"
+        android:layout_toStartOf="@+id/textViewDate3"
         app:srcCompat="@drawable/f44" />
 
     <ImageView
@@ -187,45 +183,43 @@
         android:layout_height="70dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/textViewLow1"
-        android:layout_marginTop="62dp"
+        android:layout_below="@+id/textViewText4"
         app:srcCompat="@drawable/f44" />
 
     <ImageView
         android:id="@+id/imageViewCode5"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:layout_alignLeft="@+id/textViewLow2"
-        android:layout_alignStart="@+id/textViewLow2"
-        android:layout_alignTop="@+id/imageViewCode4"
+        android:layout_alignBottom="@+id/textViewLow4"
+        android:layout_toLeftOf="@+id/textViewLow2"
+        android:layout_toStartOf="@+id/textViewLow2"
         app:srcCompat="@drawable/f44" />
 
     <ImageView
         android:id="@+id/imageViewCode6"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:layout_alignLeft="@+id/textViewLow3"
-        android:layout_alignStart="@+id/textViewLow3"
-        android:layout_alignTop="@+id/imageViewCode5"
+        android:layout_alignLeft="@+id/imageViewCode3"
+        android:layout_alignStart="@+id/imageViewCode3"
+        android:layout_below="@+id/textViewText6"
         app:srcCompat="@drawable/f44" />
 
     <TextView
         android:id="@+id/textViewText4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textViewText5"
-        android:layout_alignBottom="@+id/textViewText5"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
+        android:layout_above="@+id/textViewDate4"
+        android:layout_alignLeft="@+id/imageViewCode4"
+        android:layout_alignStart="@+id/imageViewCode4"
         android:text="TextView" />
 
     <TextView
         android:id="@+id/textViewDate4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/imageViewCode4"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/imageViewCode4"
+        android:layout_toRightOf="@+id/imageViewCode4"
         android:text="TextView" />
 
     <TextView
@@ -241,10 +235,9 @@
         android:id="@+id/textViewHigh4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textViewHigh5"
-        android:layout_alignBottom="@+id/textViewHigh5"
-        android:layout_alignLeft="@+id/textViewDay4"
-        android:layout_alignStart="@+id/textViewDay4"
+        android:layout_below="@+id/textViewDay4"
+        android:layout_toEndOf="@+id/imageViewCode4"
+        android:layout_toRightOf="@+id/imageViewCode4"
         android:text="TextView" />
 
     <TextView
@@ -269,36 +262,36 @@
         android:id="@+id/textViewDate5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/textViewText5"
-        android:layout_alignRight="@+id/textViewText5"
-        android:layout_below="@+id/imageViewCode5"
+        android:layout_below="@+id/textViewText5"
+        android:layout_toEndOf="@+id/imageViewCode5"
+        android:layout_toRightOf="@+id/imageViewCode5"
         android:text="TextView" />
 
     <TextView
         android:id="@+id/textViewDay5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/textViewDate5"
-        android:layout_alignRight="@+id/textViewDate5"
         android:layout_below="@+id/textViewDate5"
+        android:layout_toEndOf="@+id/imageViewCode5"
+        android:layout_toRightOf="@+id/imageViewCode5"
         android:text="TextView" />
 
     <TextView
         android:id="@+id/textViewHigh5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textViewDay5"
-        android:layout_alignStart="@+id/textViewDay5"
-        android:layout_below="@+id/textViewDay5"
+        android:layout_below="@+id/textViewLow5"
+        android:layout_toEndOf="@+id/imageViewCode5"
+        android:layout_toRightOf="@+id/imageViewCode5"
         android:text="TextView" />
 
     <TextView
         android:id="@+id/textViewLow5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/textViewLow4"
-        android:layout_alignLeft="@+id/textViewHigh5"
-        android:layout_alignStart="@+id/textViewHigh5"
+        android:layout_below="@+id/textViewDay5"
+        android:layout_toEndOf="@+id/imageViewCode5"
+        android:layout_toRightOf="@+id/imageViewCode5"
         android:text="TextView" />
 
     <TextView
@@ -315,9 +308,9 @@
         android:id="@+id/textViewDate6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/imageViewCode6"
-        android:layout_alignRight="@+id/imageViewCode6"
-        android:layout_below="@+id/imageViewCode6"
+        android:layout_below="@+id/textViewText6"
+        android:layout_toEndOf="@+id/imageViewCode6"
+        android:layout_toRightOf="@+id/imageViewCode6"
         android:text="TextView" />
 
     <TextView

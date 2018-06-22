@@ -9,4 +9,5 @@ import com.example.krzysiek.astro.data.Channel;
 public interface WeatherServiceCallback {
     void serviceSuccess(Channel channel);
     void serviceFailure(Exception ex);
+    void refreshWeather();
  }

@@ -45,13 +45,11 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="24dp"
         android:onClick="onClickMenu"
         android:text="Menu"
         app:layout_constraintBottom_toBottomOf="@+id/container"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginLeft="148dp"
-        android:layout_marginStart="148dp" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </android.support.constraint.ConstraintLayout>

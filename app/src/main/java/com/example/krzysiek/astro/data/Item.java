@@ -36,8 +36,8 @@ public class Item implements JSONPopulator {
         condition.populate(data.optJSONObject("condition"));
 
         jsonArray = data.optJSONArray("forecast");
-        forecast = new Forecast[5];
-        for (int i = 0; i < 5; i++) {
+        forecast = new Forecast[8];
+        for (int i = 0; i < 8; i++) {
             try {
                 forecast[i] = new Forecast();
                 forecast[i].populate(jsonArray.getJSONObject(i));

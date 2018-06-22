@@ -1,10 +1,9 @@
 package com.example.krzysiek.astro;
 
-import android.annotation.SuppressLint;
+
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.databinding.DataBindingUtil;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -18,12 +17,13 @@ import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-
 import com.example.krzysiek.astro.data.Atmosphere;
 import com.example.krzysiek.astro.data.Channel;
 import com.example.krzysiek.astro.data.Item;
+import com.example.krzysiek.astro.data.Wind;
 import com.example.krzysiek.astro.service.WeatherServiceCallback;
 import com.example.krzysiek.astro.service.YahooWeatherService;
+
 
 public class Fragment4 extends Fragment implements WeatherServiceCallback {
 
@@ -35,35 +35,32 @@ public class Fragment4 extends Fragment implements WeatherServiceCallback {
     private TextView latitudeTextView;
     private TextView longitudeTextView;
     private YahooWeatherService service;
-    private Spinner comboCity;
     private ProgressDialog dialog;
 
     private SharedPreferences.Editor editor;
     private SharedPreferences preferences;
-    private Button saveLocationButton;
-    private EditText editText;
-    //private FragmentFragment3Binding fragment3LayoutBinding;
+
+    TextView windTextView;
+    TextView windDirTextView;
+    TextView HumTextView;
+    TextView VisTextView;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         ViewGroup view = (ViewGroup)inflater.inflate(R.layout.fragment_fragment4,container,false);
-        weatherIconImageView = (ImageView)view.findViewById(R.id.weatherIconImageView);
-        temperatureTextView = (TextView)view.findViewById(R.id.temperatureTextView);
-        conditionTextView = (TextView)view.findViewById(R.id.conditionTextView);
-        locationTextView = (TextView)view.findViewById(R.id.locationTextView);
-        airPressureTextView = (TextView)view.findViewById(R.id.airPressureTextView);
-        latitudeTextView = (TextView)view.findViewById(R.id.latitudeTextView);
-        longitudeTextView = (TextView)view.findViewById(R.id.longitudeTextView);
-        comboCity = (Spinner)view.findViewById(R.id.comboCity);
-        editText = (EditText)view.findViewById(R.id.editText);
+        windTextView = (TextView) view.findViewById(R.id.WindtextView);
+        windDirTextView = (TextView) view.findViewById(R.id.WindDirtextView);
+        HumTextView = (TextView) view.findViewById(R.id.HumtextView);
+        VisTextView = (TextView) view.findViewById(R.id.VistextView);
 
         preferences = getActivity().getSharedPreferences("com.example.krzysiek.astro", Context.MODE_PRIVATE);
         editor = preferences.edit();
 
+
         service = new YahooWeatherService(this);
-        service.refreshWeather("Lodz");
+        service.refreshWeather("Lodz, PL");
         dialog = new ProgressDialog(getActivity());
         dialog.setMessage("Loading...");
         dialog.show();
@@ -76,37 +73,47 @@ public class Fragment4 extends Fragment implements WeatherServiceCallback {
 
     @Override
     public void serviceSuccess(Channel channel) {
-        dialog.hide();
+       dialog.hide();
 
-        Item item = channel.getItem();
         Atmosphere atmosphere = channel.getAtmosphere();
+        Wind wind = channel.getWind();
 
- //       editor.putInt("imageViewStatus30", getResources().getIdentifier("drawable/f" + item.getCondition().getCode(), null, getActivity().getPackageName()));
-        editor.putString("textViewTemp30", item.getCondition().getTemperature()+" \u00B0"+channel.getUnits().getTemperature());
-//        editor.putString("textViewLocation30", service.getLocation());
-//        editor.putString("textViewDesc30", item.getCondition().getDescription());
-        editor.putString("textViewPreasure30", atmosphere.getPressure().toString()+" \u33D4");
-        editor.putString("textViewLat30", item.getLat().toString());
-        editor.putString("textViewLong30", item.getLongi().toString());
+        editor.putString("windTextView", wind.getSpeed().toString());
+        editor.putString("windDirTextView", wind.getDirection());
+        editor.putString("HumtextView", atmosphere.getHumidity());
+        editor.putString("VistextView", atmosphere.getVisibility());
         editor.commit();
 
-        int resourceID =  preferences.getInt("imageViewStatus30", 0);
-        //       Drawable weatherIconDrawable = getResources().getDrawable(resourceID);
-//        weatherIconImageView.setImageDrawable(weatherIconDrawable);
 
-        temperatureTextView.setText(preferences.getString("textViewTemp30", ""));
-        //locationTextView.setText(preferences.getString("textViewLocation30", ""));
-        //conditionTextView.setText(preferences.getString("textViewDesc30", ""));
-        airPressureTextView.setText(preferences.getString("textViewPreasure30", ""));
-        latitudeTextView.setText(preferences.getString("textViewLat30", ""));
-        longitudeTextView.setText(preferences.getString("textViewLong30", ""));
+        windTextView.setText(preferences.getString("windTextView", ""));
+        windDirTextView.setText(preferences.getString("windDirTextView", ""));
+        HumTextView.setText(preferences.getString("HumtextView", ""));
+        VisTextView.setText(preferences.getString("VistextView", ""));
+
+        refreshWeather();
 
     }
 
     @Override
     public void serviceFailure(Exception ex) {
         //Toast.makeText(this,ex.getMessage(),Toast.LENGTH_LONG).show();
+        refreshWeather();
+        dialog.hide();
 
+    }
+    @Override
+    public void refreshWeather() {
+
+//        int resourceID =  preferences.getInt("imageViewStatus30", 0);
+//        Drawable weatherIconDrawable = getResources().getDrawable(resourceID);
+//        weatherIconImageView.setImageDrawable(weatherIconDrawable);
+//
+//        temperatureTextView.setText(preferences.getString("textViewTemp30", ""));
+//        locationTextView.setText(preferences.getString("textViewLocation30", ""));
+//        conditionTextView.setText(preferences.getString("textViewDesc30", ""));
+//        airPressureTextView.setText(preferences.getString("textViewPreasure30", ""));
+//        latitudeTextView.setText(preferences.getString("textViewLat30", ""));
+//        longitudeTextView.setText(preferences.getString("textViewLong30", ""));
     }
 
 
