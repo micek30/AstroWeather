@@ -26,9 +26,10 @@ public class SecondActivity extends AppCompatActivity {
     private SharedPreferences.Editor editor;
     private SharedPreferences preferences;
     private Button buttonSave;
-    private EditText editText;
     private Spinner comboCity;
+    private Spinner spinnerCF;
     private List<String> cityList = new ArrayList<>();
+    private List<String> tempCF = new ArrayList<>();
     private  int count=0;
 
 
@@ -43,17 +44,21 @@ public class SecondActivity extends AppCompatActivity {
         editTextLa = (EditText) findViewById(R.id.editTextLatitude);
         editTextLo = (EditText) findViewById(R.id.editTextLongitude);
         editTextRe = (EditText) findViewById(R.id.editTextRefreshTime);
-        editTextCity = (EditText) findViewById(R.id.editText);
+        editTextCity = (EditText) findViewById(R.id.editTextCity);
+        comboCity = (Spinner) findViewById(R.id.spinnerCity);
+        spinnerCF = (Spinner) findViewById(R.id.spinnerCF);
 
         editTextLa.setText("" + String.valueOf(MainActivity.latitude));
         editTextLo.setText("" + String.valueOf(MainActivity.longitude));
         editTextRe.setText("" + MainActivity.refreshTime/1000);
 
-        editText = (EditText)this.findViewById(R.id.editText);
-        buttonSave = (Button) this.findViewById(R.id.buttonSave);
 
         cityList.add("Lodz");
-        cityList.add("Warszawa");
+        cityList.add("Berlin");
+        cityList.add("Moscow");
+
+        tempCF.add("c");
+        tempCF.add("f");
 
 
         int prefsInt = preferences.getInt("howMuch6", 0);
@@ -65,6 +70,7 @@ public class SecondActivity extends AppCompatActivity {
         }
 
         int prefsInt2 = preferences.getInt("selectedLocationID", 0);
+        int prefTempId = preferences.getInt("selectedTemp", 0);
 
 
         ArrayAdapter<String> adapter =
@@ -73,6 +79,13 @@ public class SecondActivity extends AppCompatActivity {
         adapter.setDropDownViewResource(
                 android.R.layout.simple_spinner_dropdown_item);
         comboCity.setAdapter(adapter);
+
+        ArrayAdapter<String> adapterCF =
+                new ArrayAdapter<String>(this,
+                        android.R.layout.simple_spinner_item, tempCF);
+        adapterCF.setDropDownViewResource(
+                android.R.layout.simple_spinner_dropdown_item);
+        spinnerCF.setAdapter(adapterCF);
 
 
         comboCity.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
@@ -90,13 +103,29 @@ public class SecondActivity extends AppCompatActivity {
             public void onNothingSelected(AdapterView<?> parent) {}
         });
 
+        spinnerCF.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
+
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view,
+                                       int position, long id) {
+                String selected = parent.getItemAtPosition(position).toString();
+                editor.putString("selectedTemp", selected);
+                editor.putInt("selectedTemp", position);
+                editor.commit();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {}
+        });
+
         comboCity.setSelection(prefsInt2);
+        spinnerCF.setSelection(prefTempId);
 
 
     }
 
     public void onClickSave(View view) {
-        if(!editTextCity.getText().toString().equals("")) {
+        if(!editTextCity.getText().toString().equals("")&&!editTextCity.getText().toString().equals("City...")) {
             count++;
             editor.putInt("howMuch6", count);
             editor.putString("wordPlace" + count, editTextCity.getText().toString());

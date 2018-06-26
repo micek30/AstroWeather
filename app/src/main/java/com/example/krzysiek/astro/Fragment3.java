@@ -58,18 +58,16 @@ public class Fragment3 extends Fragment implements WeatherServiceCallback {
         airPressureTextView = (TextView)view.findViewById(R.id.airPressureTextView);
         latitudeTextView = (TextView)view.findViewById(R.id.latitudeTextView);
         longitudeTextView = (TextView)view.findViewById(R.id.longitudeTextView);
-        comboCity = (Spinner)view.findViewById(R.id.comboCity);
-        editText = (EditText)view.findViewById(R.id.editText);
-        buttonSave = (Button) view.findViewById(R.id.buttonSave);
-        comboCity = (Spinner) view.findViewById(R.id.comboCity);
+
 
         preferences = getActivity().getSharedPreferences("config.xml", Context.MODE_PRIVATE);
         editor = preferences.edit();
 
-        String location = preferences.getString("selectedLocation", "lodz");
+        String location = preferences.getString("selectedLocation", "Lodz");
+        String tempScale = preferences.getString("selectedTemp", "c");
 
         service = new YahooWeatherService(this);
-        service.refreshWeather(location);
+        service.refreshWeather(location, tempScale);
         dialog = new ProgressDialog(getActivity());
         dialog.setMessage("Loading...");
         dialog.show();

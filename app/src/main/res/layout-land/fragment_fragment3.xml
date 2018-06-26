@@ -28,20 +28,21 @@
             android:id="@+id/temperatureTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/conditionTextView"
-            android:layout_alignStart="@+id/conditionTextView"
-            android:layout_alignTop="@+id/locationTextView"
+            android:layout_alignBaseline="@+id/locationTextView"
+            android:layout_alignBottom="@+id/locationTextView"
+            android:layout_toEndOf="@+id/longitudeTextView"
+            android:layout_toRightOf="@+id/longitudeTextView"
+            android:textSize="22sp"
             android:text="@string/temperature" />
 
         <TextView
             android:id="@+id/conditionTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/imageView"
-            android:layout_alignRight="@+id/imageView"
-            android:layout_alignTop="@+id/editText"
-            android:layout_marginEnd="15dp"
-            android:layout_marginRight="15dp"
+            android:layout_above="@+id/textView7"
+            android:layout_marginBottom="14dp"
+            android:layout_toEndOf="@+id/longitudeTextView"
+            android:layout_toRightOf="@+id/longitudeTextView"
             android:text="@string/condition" />
 
         <TextView
@@ -69,12 +70,11 @@
             android:id="@+id/airPressureTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/comboCity"
-            android:layout_marginLeft="24dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="16dp"
-            android:layout_toEndOf="@+id/textView6"
-            android:layout_toRightOf="@+id/textView6"
+            android:layout_alignLeft="@+id/weatherIconImageView"
+            android:layout_alignStart="@+id/weatherIconImageView"
+            android:layout_alignTop="@+id/textView8"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
             android:text="@string/air_pressure" />
 
         <TextView
@@ -94,18 +94,20 @@
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@+id/textView8"
             android:layout_alignBottom="@+id/textView8"
-            android:layout_alignLeft="@+id/latitudeTextView"
-            android:layout_alignStart="@+id/latitudeTextView"
+            android:layout_toLeftOf="@+id/imageView"
+            android:layout_toStartOf="@+id/imageView"
             android:text="@string/longitude" />
 
         <TextView
             android:id="@+id/textView6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/airPressureTextView"
-            android:layout_alignBottom="@+id/airPressureTextView"
-            android:layout_toEndOf="@+id/imageView"
-            android:layout_toRightOf="@+id/imageView"
+            android:layout_below="@+id/weatherIconImageView"
+            android:layout_marginEnd="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="43dp"
+            android:layout_toLeftOf="@+id/airPressureTextView"
+            android:layout_toStartOf="@+id/airPressureTextView"
             android:text="@string/air_pressure"
             android:textSize="18sp" />
 
@@ -113,11 +115,9 @@
             android:id="@+id/textView7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignTop="@+id/airPressureTextView"
-            android:layout_marginLeft="17dp"
-            android:layout_marginStart="17dp"
+            android:layout_alignLeft="@+id/locationTextView"
+            android:layout_alignStart="@+id/locationTextView"
+            android:layout_below="@+id/weatherIconImageView"
             android:text="@string/latitude"
             android:textSize="18sp" />
 
@@ -131,25 +131,6 @@
             android:layout_marginTop="21dp"
             android:text="@string/longitude"
             android:textSize="18sp" />
-
-        <Spinner
-            android:id="@+id/comboCity"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/editText" />
-
-        <EditText
-            android:id="@+id/editText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/weatherIconImageView"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Enter city..." />
 
     </RelativeLayout>
 

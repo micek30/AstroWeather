@@ -21,6 +21,7 @@ import java.net.URLConnection;
 public class YahooWeatherService {
     private WeatherServiceCallback callback;
     private String location;
+    private String tempScale;
     private Exception error;
 
     public YahooWeatherService(WeatherServiceCallback callback) {
@@ -31,8 +32,9 @@ public class YahooWeatherService {
         return location;
     }
 
-    public void refreshWeather(String l){
+    public void refreshWeather(String l,String tempScale){
         this.location=l;
+        this.tempScale= tempScale;
         new AsyncTask<String,Void,String>(){
             @Override
             protected String doInBackground(String... strings) {

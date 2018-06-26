@@ -45,7 +45,6 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="24dp"
         android:onClick="onClickMenu"
         android:text="Menu"
         app:layout_constraintBottom_toBottomOf="@+id/container"
