@@ -64,13 +64,13 @@ public class Fragment3 extends Fragment implements WeatherServiceCallback {
         editor = preferences.edit();
 
         String location = preferences.getString("selectedLocation", "Lodz");
-        String tempScale = preferences.getString("selectedTemp", "c");
+        String tempScale = preferences.getString("selectedTempForm", "c");
 
         service = new YahooWeatherService(this);
-        service.refreshWeather(location, tempScale);
+        service.refreshWeather(location,tempScale);
         dialog = new ProgressDialog(getActivity());
         dialog.setMessage("Loading...");
-        dialog.show();
+//        dialog.show();
 
 
 

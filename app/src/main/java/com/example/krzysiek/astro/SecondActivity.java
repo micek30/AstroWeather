@@ -70,7 +70,7 @@ public class SecondActivity extends AppCompatActivity {
         }
 
         int prefsInt2 = preferences.getInt("selectedLocationID", 0);
-        int prefTempId = preferences.getInt("selectedTemp", 0);
+        int prefTempId = preferences.getInt("selectedTempID", 0);
 
 
         ArrayAdapter<String> adapter =
@@ -109,8 +109,8 @@ public class SecondActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parent, View view,
                                        int position, long id) {
                 String selected = parent.getItemAtPosition(position).toString();
-                editor.putString("selectedTemp", selected);
-                editor.putInt("selectedTemp", position);
+                editor.putString("selectedTempForm", selected);
+                editor.putInt("selectedTempID", position);
                 editor.commit();
             }
 

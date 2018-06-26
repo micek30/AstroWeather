@@ -2,6 +2,7 @@ package com.example.krzysiek.astro.service;
 
 import android.net.Uri;
 import android.os.AsyncTask;
+import android.widget.Spinner;
 
 import com.example.krzysiek.astro.data.Channel;
 
@@ -32,13 +33,14 @@ public class YahooWeatherService {
         return location;
     }
 
-    public void refreshWeather(String l,String tempScale){
+    public void refreshWeather(String l, String temp){
         this.location=l;
-        this.tempScale= tempScale;
+        this.tempScale= temp;
         new AsyncTask<String,Void,String>(){
             @Override
             protected String doInBackground(String... strings) {
-                String YQL = String.format("select * from weather.forecast where woeid in (select woeid from geo.places(1) where text=\"%s\") and u=\"c\"", location);
+                String YQL = String.format("select * from weather.forecast where woeid in (select woeid from geo.places(1) where text=\"%s\") and u=\"%s\"", strings[0], strings[1]);
+                //String YQL = String.format("select * from weather.forecast where woeid in (select woeid from geo.places(1) where text=\"%s\")", location);
                 String endpoint = String.format("https://query.yahooapis.com/v1/public/yql?q=%s&format=json", Uri.encode(YQL));
                 try {
                     URL url = new URL(endpoint);
@@ -91,7 +93,7 @@ public class YahooWeatherService {
                 }
             }
             
-        }.execute(location);
+        }.execute(location,tempScale);
     }
 
     public class LocationWeatherException extends Exception{

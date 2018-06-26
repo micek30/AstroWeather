@@ -46,11 +46,14 @@ public class Fragment5 extends Fragment implements WeatherServiceCallback {
 
         fillView();
 
-        preferences = getActivity().getSharedPreferences("com.example.krzysiek.astro", Context.MODE_PRIVATE);
+        preferences = getActivity().getSharedPreferences("config.xml", Context.MODE_PRIVATE);
         editor = preferences.edit();
 
+        String location = preferences.getString("selectedLocation", "Lodz");
+        String tempScale = preferences.getString("selectedTempForm", "c");
+
         service = new YahooWeatherService(this);
-        service.refreshWeather("Lodz, PL");
+        service.refreshWeather(location, tempScale);
         dialog = new ProgressDialog(getActivity());
         dialog.setMessage("Loading...");
         dialog.show();

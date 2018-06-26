@@ -55,12 +55,14 @@ public class Fragment4 extends Fragment implements WeatherServiceCallback {
         HumTextView = (TextView) view.findViewById(R.id.HumtextView);
         VisTextView = (TextView) view.findViewById(R.id.VistextView);
 
-        preferences = getActivity().getSharedPreferences("com.example.krzysiek.astro", Context.MODE_PRIVATE);
+        preferences = getActivity().getSharedPreferences("config.xml", Context.MODE_PRIVATE);
         editor = preferences.edit();
 
+        String location = preferences.getString("selectedLocation", "Lodz");
+        String tempScale = preferences.getString("selectedTempForm", "c");
 
         service = new YahooWeatherService(this);
-        service.refreshWeather("Lodz, PL");
+        service.refreshWeather(location, tempScale);
         dialog = new ProgressDialog(getActivity());
         dialog.setMessage("Loading...");
         dialog.show();
@@ -84,12 +86,6 @@ public class Fragment4 extends Fragment implements WeatherServiceCallback {
         editor.putString("VistextView", atmosphere.getVisibility());
         editor.commit();
 
-
-        windTextView.setText(preferences.getString("windTextView", ""));
-        windDirTextView.setText(preferences.getString("windDirTextView", ""));
-        HumTextView.setText(preferences.getString("HumtextView", ""));
-        VisTextView.setText(preferences.getString("VistextView", ""));
-
         refreshWeather();
 
     }
@@ -104,16 +100,11 @@ public class Fragment4 extends Fragment implements WeatherServiceCallback {
     @Override
     public void refreshWeather() {
 
-//        int resourceID =  preferences.getInt("imageViewStatus30", 0);
-//        Drawable weatherIconDrawable = getResources().getDrawable(resourceID);
-//        weatherIconImageView.setImageDrawable(weatherIconDrawable);
-//
-//        temperatureTextView.setText(preferences.getString("textViewTemp30", ""));
-//        locationTextView.setText(preferences.getString("textViewLocation30", ""));
-//        conditionTextView.setText(preferences.getString("textViewDesc30", ""));
-//        airPressureTextView.setText(preferences.getString("textViewPreasure30", ""));
-//        latitudeTextView.setText(preferences.getString("textViewLat30", ""));
-//        longitudeTextView.setText(preferences.getString("textViewLong30", ""));
+        windTextView.setText(preferences.getString("windTextView", ""));
+        windDirTextView.setText(preferences.getString("windDirTextView", ""));
+        HumTextView.setText(preferences.getString("HumtextView", ""));
+        VisTextView.setText(preferences.getString("VistextView", ""));
+
     }
 
 
