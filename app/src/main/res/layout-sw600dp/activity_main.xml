@@ -66,6 +66,16 @@
         app:layout_constraintBottom_toBottomOf="@+id/container"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/yahoo_logo"
+        tools:layout_editor_absoluteX="450dp"
+        tools:layout_editor_absoluteY="842dp" />
+
 
 </android.support.constraint.ConstraintLayout>
 

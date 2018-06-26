@@ -65,7 +65,7 @@ public class Fragment4 extends Fragment implements WeatherServiceCallback {
         service.refreshWeather(location, tempScale);
         dialog = new ProgressDialog(getActivity());
         dialog.setMessage("Loading...");
-        dialog.show();
+//        dialog.show();
 
 
 

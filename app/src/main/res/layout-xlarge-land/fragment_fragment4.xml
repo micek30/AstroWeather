@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <data>
+
+        <!--<variable-->
+        <!--name="moon"-->
+        <!--type="com.example.krzysiek.astro.Moon"/>-->
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="83dp"
+            android:layout_marginStart="83dp"
+            android:layout_marginTop="86dp"
+            android:text="Wind:"
+            android:textSize="50sp" />
+
+        <TextView
+            android:id="@+id/WindtextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/textView"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="90dp"
+            android:layout_marginRight="90dp"
+            android:textSize="50sp"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView"
+            android:layout_alignStart="@+id/textView"
+            android:layout_below="@+id/textView"
+            android:layout_marginTop="173dp"
+            android:text="Wind direction"
+            android:textSize="50sp" />
+
+        <TextView
+            android:id="@+id/WindDirtextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/WindtextView"
+            android:layout_alignStart="@+id/WindtextView"
+            android:layout_alignTop="@+id/textView3"
+            android:textSize="50sp"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/WindDirtextView"
+            android:layout_alignLeft="@+id/textView3"
+            android:layout_alignStart="@+id/textView3"
+            android:layout_marginBottom="52dp"
+            android:text="Humidity"
+            android:textSize="50sp" />
+
+        <TextView
+            android:id="@+id/HumtextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView5"
+            android:layout_alignBottom="@+id/textView5"
+            android:layout_alignLeft="@+id/WindDirtextView"
+            android:layout_alignStart="@+id/WindDirtextView"
+            android:textSize="50sp"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView3"
+            android:layout_alignStart="@+id/textView3"
+            android:layout_below="@+id/textView3"
+            android:layout_marginTop="52dp"
+            android:text="Visibility"
+            android:textSize="50sp" />
+
+        <TextView
+            android:id="@+id/VistextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView10"
+            android:layout_alignBottom="@+id/textView10"
+            android:layout_alignLeft="@+id/HumtextView"
+            android:layout_alignStart="@+id/HumtextView"
+            android:textSize="50sp"
+            android:text="TextView" />
+    </RelativeLayout>
+
+</layout>

@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textViewTest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="Next Day"
+        android:textSize="70sp" />
+
+    <ImageView
+        android:id="@+id/imageViewCode1"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textViewText1"
+        app:srcCompat="@drawable/f44" />
+
+    <TextView
+        android:id="@+id/textViewDate1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textViewDate4"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/textViewDate4"
+        android:layout_below="@+id/imageViewCode1"
+        android:text="Date"
+        android:textSize="40sp" />
+
+    <TextView
+        android:id="@+id/textViewDay1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textViewDate1"
+        android:layout_alignLeft="@+id/textViewDate1"
+        android:layout_alignRight="@+id/textViewDate1"
+        android:layout_alignStart="@+id/textViewDate1"
+        android:layout_below="@+id/textViewDate1"
+        android:text="Day"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/textViewHigh1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textViewDay1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/textViewDay1"
+        android:layout_below="@+id/textViewDay1"
+        android:text="High"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/textViewLow1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textViewHigh1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/textViewHigh1"
+        android:layout_below="@+id/textViewHigh1"
+        android:text="Low"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/textViewText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textViewText2"
+        android:layout_alignBottom="@+id/textViewText2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="25sp"
+        android:text="Text" />
+
+    <ImageView
+        android:id="@+id/imageViewCode2"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@+id/textViewText2"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/f44" />
+
+    <TextView
+        android:id="@+id/textViewDate2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/imageViewCode2"
+        android:layout_alignRight="@+id/imageViewCode2"
+        android:layout_below="@+id/imageViewCode2"
+        android:text="TextView"
+        android:textSize="40sp" />
+
+    <TextView
+        android:id="@+id/textViewDay2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textViewDate2"
+        android:layout_alignLeft="@+id/textViewDate2"
+        android:layout_alignRight="@+id/textViewDate2"
+        android:layout_alignStart="@+id/textViewDate2"
+        android:layout_below="@+id/textViewDate2"
+        android:textSize="25sp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textViewHigh2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textViewDay2"
+        android:layout_alignLeft="@+id/textViewDay2"
+        android:layout_alignRight="@+id/textViewDay2"
+        android:layout_alignStart="@+id/textViewDay2"
+        android:layout_below="@+id/textViewDay2"
+        android:textSize="25sp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textViewLow2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textViewHigh2"
+        android:layout_alignLeft="@+id/textViewHigh2"
+        android:layout_alignRight="@+id/textViewHigh2"
+        android:layout_alignStart="@+id/textViewHigh2"
+        android:layout_below="@+id/textViewHigh2"
+        android:textSize="25sp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textViewText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imageViewCode2"
+        android:layout_alignStart="@+id/imageViewCode2"
+        android:layout_below="@+id/textViewTest"
+        android:text="TextView"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/textViewDate3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/imageViewCode3"
+        android:text="TextView"
+        android:textSize="40sp" />
+
+    <TextView
+        android:id="@+id/textViewDay3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewDate3"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignStart="@+id/textViewDate3"
+        android:layout_below="@+id/textViewDate3"
+        android:textSize="25sp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textViewHigh3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewDay3"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignStart="@+id/textViewDay3"
+        android:layout_below="@+id/textViewDay3"
+        android:textSize="25sp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textViewLow3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewHigh3"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignStart="@+id/textViewHigh3"
+        android:layout_below="@+id/textViewHigh3"
+        android:textSize="25sp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textViewText3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imageViewCode3"
+        android:layout_alignStart="@+id/imageViewCode3"
+        android:layout_below="@+id/textViewTest"
+        android:textSize="25sp"
+        android:text="TextView" />
+
+    <ImageView
+        android:id="@+id/imageViewCode3"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textViewText3"
+        app:srcCompat="@drawable/f44" />
+
+    <ImageView
+        android:id="@+id/imageViewCode4"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textViewLow1"
+        android:layout_marginTop="106dp"
+        app:srcCompat="@drawable/f44" />
+
+    <ImageView
+        android:id="@+id/imageViewCode5"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignLeft="@+id/imageViewCode2"
+        android:layout_alignStart="@+id/imageViewCode2"
+        android:layout_alignTop="@+id/imageViewCode4"
+        app:srcCompat="@drawable/f44" />
+
+    <ImageView
+        android:id="@+id/imageViewCode6"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textViewText6"
+        app:srcCompat="@drawable/f44" />
+
+    <TextView
+        android:id="@+id/textViewText4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textViewText5"
+        android:layout_alignBottom="@+id/textViewText5"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="25sp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textViewDate4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/imageViewCode4"
+        android:text="TextView"
+        android:textSize="40sp" />
+
+    <TextView
+        android:id="@+id/textViewDay4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textViewDate4"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/textViewDate4"
+        android:layout_below="@+id/textViewDate4"
+        android:textSize="25sp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textViewHigh4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textViewHigh5"
+        android:layout_alignBottom="@+id/textViewHigh5"
+        android:layout_alignEnd="@+id/textViewDay4"
+        android:layout_alignLeft="@+id/textViewDay4"
+        android:layout_alignRight="@+id/textViewDay4"
+        android:layout_alignStart="@+id/textViewDay4"
+        android:textSize="25sp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textViewLow4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textViewHigh4"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/textViewHigh4"
+        android:layout_below="@+id/textViewHigh4"
+        android:textSize="25sp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textViewText5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageViewCode5"
+        android:layout_alignLeft="@+id/imageViewCode5"
+        android:layout_alignStart="@+id/imageViewCode5"
+        android:textSize="25sp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textViewDate5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/imageViewCode5"
+        android:layout_alignRight="@+id/imageViewCode5"
+        android:layout_below="@+id/imageViewCode5"
+        android:text="TextView"
+        android:textSize="40sp" />
+
+    <TextView
+        android:id="@+id/textViewDay5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textViewDate5"
+        android:layout_alignLeft="@+id/textViewDate5"
+        android:layout_alignRight="@+id/textViewDate5"
+        android:layout_alignStart="@+id/textViewDate5"
+        android:layout_below="@+id/textViewDate5"
+        android:textSize="25sp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textViewHigh5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textViewDay5"
+        android:layout_alignLeft="@+id/textViewDay5"
+        android:layout_alignRight="@+id/textViewDay5"
+        android:layout_alignStart="@+id/textViewDay5"
+        android:layout_below="@+id/textViewDay5"
+        android:textSize="25sp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textViewLow5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textViewLow4"
+        android:layout_alignEnd="@+id/textViewHigh5"
+        android:layout_alignLeft="@+id/textViewHigh5"
+        android:layout_alignRight="@+id/textViewHigh5"
+        android:layout_alignStart="@+id/textViewHigh5"
+        android:textSize="25sp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textViewText6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageViewCode5"
+        android:layout_alignLeft="@+id/imageViewCode6"
+        android:layout_alignStart="@+id/imageViewCode6"
+        android:text="TextView"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/textViewDate6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/imageViewCode6"
+        android:text="TextView"
+        android:textSize="40sp" />
+
+    <TextView
+        android:id="@+id/textViewDay6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewDate6"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignStart="@+id/textViewDate6"
+        android:layout_below="@+id/textViewDate6"
+        android:textSize="25sp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textViewHigh6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewDay6"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignStart="@+id/textViewDay6"
+        android:layout_below="@+id/textViewDay6"
+        android:textSize="25sp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textViewLow6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewHigh6"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignStart="@+id/textViewHigh6"
+        android:layout_below="@+id/textViewHigh6"
+        android:textSize="25sp"
+        android:text="TextView" />
+
+
+</RelativeLayout>

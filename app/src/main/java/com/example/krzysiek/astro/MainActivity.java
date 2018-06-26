@@ -146,7 +146,9 @@ public class MainActivity extends AppCompatActivity {
     }
     public void onClickRefresh(View view) {
         Intent intent = new Intent(this, MainActivity.class);
+
         startActivity(intent);
+        finish();
     }
 
 
