@@ -61,11 +61,11 @@ public class SecondActivity extends AppCompatActivity {
         tempCF.add("f");
 
 
-        int prefsInt = preferences.getInt("howMuch6", 0);
+        int prefsInt = preferences.getInt("countLocation", 0);
         if(prefsInt != 0){
             count = prefsInt;
             for(int i = 0; i < count; i++){
-                cityList.add(preferences.getString("wordPlace" + (i+1), ""));
+                cityList.add(preferences.getString("Location" + (i+1), ""));
             }
         }
 
@@ -127,8 +127,8 @@ public class SecondActivity extends AppCompatActivity {
     public void onClickSave(View view) {
         if(!editTextCity.getText().toString().equals("")&&!editTextCity.getText().toString().equals("City...")) {
             count++;
-            editor.putInt("howMuch6", count);
-            editor.putString("wordPlace" + count, editTextCity.getText().toString());
+            editor.putInt("countLocation", count);
+            editor.putString("Location" + count, editTextCity.getText().toString());
             editor.commit();
         }
 

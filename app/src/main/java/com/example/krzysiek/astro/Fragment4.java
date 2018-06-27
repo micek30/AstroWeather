@@ -16,6 +16,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.krzysiek.astro.data.Atmosphere;
 import com.example.krzysiek.astro.data.Channel;
@@ -92,7 +93,7 @@ public class Fragment4 extends Fragment implements WeatherServiceCallback {
 
     @Override
     public void serviceFailure(Exception ex) {
-        //Toast.makeText(this,ex.getMessage(),Toast.LENGTH_LONG).show();
+        Toast.makeText(getActivity(),ex.getMessage(), Toast.LENGTH_LONG).show();
         refreshWeather();
         dialog.hide();
 

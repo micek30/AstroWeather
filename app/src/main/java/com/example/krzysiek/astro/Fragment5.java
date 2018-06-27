@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 import com.example.krzysiek.astro.data.Channel;
@@ -68,12 +69,12 @@ public class Fragment5 extends Fragment implements WeatherServiceCallback {
         for(int i = 0; i <6; i ++) {
             Forecast forecast = item.getForecast(i+1);
 
-            editor.putInt("imageViewStatus5" + i, getResources().getIdentifier("drawable/f" + forecast.getCode(), null, getActivity().getPackageName()));
-            editor.putString("textViewsDate5" + i, forecast.getDate());
-            editor.putString("textViewsDay5" + i, forecast.getDay());
-            editor.putString("textViewsHigh5" + i, forecast.getHigh());
-            editor.putString("textViewsLow5" + i, forecast.getLow());
-            editor.putString("textViewsText5" + i, forecast.getText());
+            editor.putInt("imageViewStatusFor" + i, getResources().getIdentifier("drawable/f" + forecast.getCode(), null, getActivity().getPackageName()));
+            editor.putString("textViewsDateFor" + i, forecast.getDate());
+            editor.putString("textViewsDayFor" + i, forecast.getDay());
+            editor.putString("textViewsHighFor" + i, forecast.getHigh());
+            editor.putString("textViewsLowFor" + i, forecast.getLow());
+            editor.putString("textViewsTextFor" + i, forecast.getText());
 
             editor.commit();
 
@@ -84,6 +85,7 @@ public class Fragment5 extends Fragment implements WeatherServiceCallback {
 
     @Override
     public void serviceFailure(Exception e) {
+        Toast.makeText(getActivity(),e.getMessage(), Toast.LENGTH_LONG).show();
             refreshWeather();
             dialog.hide();
     }
@@ -103,13 +105,13 @@ public class Fragment5 extends Fragment implements WeatherServiceCallback {
     public void refreshWeather() {
         for(int i = 0; i < 6; i ++) {
 
-            textViewsDate[i].setText(preferences.getString("textViewsDate5"+ i, ""));
-            textViewsDay[i].setText(preferences.getString("textViewsDay5"+ i, ""));
-            textViewsHigh[i].setText(preferences.getString("textViewsHigh5"+ i, "")+"*C");
-            textViewsLow[i].setText(preferences.getString("textViewsLow5"+ i, "")+"*C");
-            textViewsCondition[i].setText(preferences.getString("textViewsText5"+ i, ""));
+            textViewsDate[i].setText(preferences.getString("textViewsDateFor"+ i, ""));
+            textViewsDay[i].setText(preferences.getString("textViewsDayFor"+ i, ""));
+            textViewsHigh[i].setText(preferences.getString("textViewsHighFor"+ i, "")+"*C");
+            textViewsLow[i].setText(preferences.getString("textViewsLowFor"+ i, "")+"*C");
+            textViewsCondition[i].setText(preferences.getString("textViewsTextFor"+ i, ""));
 
-            int resourceID = preferences.getInt("imageViewStatus5"+ i, 0);
+            int resourceID = preferences.getInt("imageViewStatusFor"+ i, 0);
             Drawable weatherIconDrawable = getResources().getDrawable(resourceID);
             imageViewsCode[i].setImageDrawable(weatherIconDrawable);
         }
